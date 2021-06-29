@@ -1,0 +1,9 @@
+---
+- name: Populate NetBox DataBase
+  hosts: all
+  gather_facts: no
+  vars:
+    ansible_connection: local
+  tasks:
+    - import_role:
+        name: build_netbox_db
